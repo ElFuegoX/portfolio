@@ -1,0 +1,19 @@
+# Fichiers de travail / brouillons
+index_old_v1.html
+index_v1_backup.html
+preview_v2.html
+plan_v2.md
+
+# Maquettes de conception (lourdes, non nécessaires en prod)
+maquette_dual_track.jpg
+maquette_sidebar.jpg
+logo_mj_blue_dark.png
+
+# CSS/JS de l'ancienne v1 (non utilisés en v2)
+css/
+js/
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+desktop.ini

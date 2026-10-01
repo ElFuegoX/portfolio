@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Mélon Joanès AFAGNIBO — Fullstack Web Developer · AI & Data Enthusiast</title>
+
+  <!-- Favicon (Logo MJ comme icône du site) -->
+  <link rel="icon" type="image/jpeg" href="logo_mj.jpg" />
+
+  <!-- SEO -->
+  <meta name="description" content="Portfolio de Mélon Joanès AFAGNIBO — Étudiant IA à l'IFRI, développeur Full-Stack. Projets XoNet, VoiceNote, Thomas, DM Arena." />
+  <meta name="author" content="Mélon Joanès AFAGNIBO" />
+  <link rel="canonical" href="https://elfuegox.github.io/" />
+
+  <!-- Open Graph (LinkedIn, WhatsApp, Discord) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elfuegox.github.io/" />
+  <meta property="og:title" content="Mélon Joanès AFAGNIBO — Fullstack Dev & AI Enthusiast" />
+  <meta property="og:description" content="Étudiant en IA à l'IFRI · Développeur Full-Stack · Projets XoNet, VoiceNote, Thomas, DM Arena." />
+  <meta property="og:image" content="https://elfuegox.github.io/moiIndaba.jpeg" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mélon Joanès AFAGNIBO — Fullstack Dev & AI" />
+  <meta name="twitter:description" content="Étudiant IA à l'IFRI · Développeur Full-Stack" />
+  <meta name="twitter:image" content="https://elfuegox.github.io/moiIndaba.jpeg" />
+
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- Clash Display (Fontshare Premium CDN - très utilisé sur Awwwards & Fintech IA) -->
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..24,400,0..1,0&display=swap"
+    rel="stylesheet" />
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #0B0F14;
+      --bg-surface: #111820;
+      --bg-surface-hover: #1A2332;
+      --border: #1E2A36;
+      --border-accent: rgba(255, 107, 53, 0.4);
+      --text-primary: #E6EDF3;
+      --text-secondary: #8B949E;
+      --text-tertiary: #6E7681;
+      --accent: #FF6B35;
+      --accent-hover: #FF8552;
+      --flame: #FF6B35;
+      --glow: rgba(255, 107, 53, 0.25);
+    }
+
+    :root:not(.dark),
+    html:not(.dark),
+    html.light,
+    body:not(.dark),
+    body.light {
+      --bg-body: #E8ECF0 !important;
+      --bg-surface: #F2F4F7 !important;
+      --bg-surface-hover: #E2E6EA !important;
+      --border: #CBD5E1 !important;
+      --border-accent: rgba(2, 132, 199, 0.6) !important;
+      --text-primary: #0F172A !important;
+      --text-secondary: #334155 !important;
+      --text-tertiary: #64748B !important;
+      --accent: #0284C7 !important;
+      --accent-hover: #0369A1 !important;
+      --flame: #38BDF8 !important;
+      --glow: rgba(2, 132, 199, 0.32) !important;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-primary);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+    }
+
+    /* Option 2: Clash Display pour des titres puissants & identitaires */
+    h1, h2, h3, .font-display {
+      font-family: 'Clash Display', 'Plus Jakarta Sans', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    /* Accents éditoriaux / prestige */
+    .font-serif-title, .font-editorial {
+      font-family: 'Fraunces', Georgia, serif;
+    }
+
+    .font-mono-code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Dashed separator visible & soyeux dans les deux modes */
+    .dashed-sep {
+      border-bottom: 1px dashed var(--accent);
+      opacity: 0.4;
+    }
+
+    html:not(.dark) .dashed-sep,
+    html.light .dashed-sep {
+      opacity: 0.75 !important;
+      border-bottom: 1.5px dashed var(--accent) !important;
+    }
+
+    /* Bordure droite de la sidebar fixe garantie nette */
+    aside {
+      border-right: 1px solid var(--border) !important;
+    }
+
+    /* Header mobile fixe garanti net */
+    header {
+      border-bottom: 1px solid var(--border) !important;
+    }
+
+    /* Bordure du footer connect hub */
+    footer {
+      border-color: var(--accent) !important;
+    }
+
+    /* Sélection de texte dynamique Awwwards (Orange en sombre, Bleu Azur en clair) */
+    ::selection {
+      background-color: var(--accent) !important;
+      color: #FFFFFF !important;
+    }
+    ::-moz-selection {
+      background-color: var(--accent) !important;
+      color: #FFFFFF !important;
+    }
+
+    .dark ::selection {
+      background-color: rgba(255, 107, 53, 0.35) !important;
+      color: #FF8552 !important;
+    }
+    .dark ::-moz-selection {
+      background-color: rgba(255, 107, 53, 0.35) !important;
+      color: #FF8552 !important;
+    }
+
+    html:not(.dark) ::selection,
+    html.light ::selection {
+      background-color: rgba(2, 132, 199, 0.25) !important;
+      color: #0284C7 !important;
+    }
+    html:not(.dark) ::-moz-selection,
+    html.light ::-moz-selection {
+      background-color: rgba(2, 132, 199, 0.25) !important;
+      color: #0284C7 !important;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-body);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent);
+    }
+
+    /* Hover Reveal Text (Flip Name -> Alias) */
+    .name-reveal-container {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .name-reveal-primary {
+      display: inline-block;
+      color: var(--accent);
+      transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .name-reveal-alias {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      display: inline-block;
+      color: var(--accent);
+      transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .name-reveal-container:hover .name-reveal-primary {
+      transform: translateY(-100%);
+    }
+
+    .name-reveal-container:hover .name-reveal-alias {
+      transform: translateY(-100%);
+    }
+
+    /* Flame Glow dynamique selon le mode actif */
+    .flame-glow {
+      box-shadow: 0 0 15px var(--glow);
+      transition: all 0.3s ease;
+    }
+
+    .flame-glow:hover {
+      box-shadow: 0 0 24px var(--glow);
+      transform: scale(1.05);
+    }
+
+    /* Ambient Cursor Spotlight (Awwwards effect) */
+    #ambient-spotlight {
+      background: radial-gradient(700px circle at var(--cursor-x, 50vw) var(--cursor-y, 40vh), var(--glow), transparent 70%);
+    }
+    html:not(.dark) #ambient-spotlight,
+    html.light #ambient-spotlight {
+      background: radial-gradient(750px circle at var(--cursor-x, 50vw) var(--cursor-y, 40vh), rgba(14, 165, 233, 0.18), transparent 68%) !important;
+    }
+
+    /* Dock styling for stack (Silky Spring Effect) */
+    .dock-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .dock-pill {
+      background-color: var(--bg-body);
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      cursor: default;
+    }
+
+    .dock-pill:hover {
+      transform: translateY(-3px) scale(1.05);
+      border-color: var(--accent);
+      box-shadow: 0 8px 22px -4px var(--glow);
+      color: var(--accent);
+    }
+
+    /* Project Cards with Silky Lift & Top Glow Line */
+    .project-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      pointer-events: none;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-accent);
+      box-shadow: 0 20px 40px -12px var(--glow);
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
+    .project-card .img-zoom {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .project-card:hover .img-zoom {
+      transform: scale(1.04);
+    }
+
+    /* Pulse animation */
+    @keyframes subtlePulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(1.15);
+      }
+    }
+
+    .pulse-dot {
+      animation: subtlePulse 2s infinite ease-in-out;
+    }
+
+    /* Scroll spy active */
+    .nav-link.active {
+      color: var(--accent) !important;
+      border-left: 2px solid var(--accent);
+      padding-left: 12px;
+      background: var(--bg-surface-hover);
+    }
+
+    /* CV Preview Popover */
+    .cv-btn-wrapper {
+      position: relative;
+    }
+
+    .cv-preview-popup {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 0;
+      width: 250px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: all 0.25s ease;
+      z-index: 50;
+    }
+
+    /* Pont invisible pour que la souris ne perde pas le hover en montant */
+    .cv-preview-popup::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: 14px;
+    }
+
+    .cv-btn-wrapper:hover .cv-preview-popup,
+    .cv-preview-popup:hover {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    /* SCROLL ANIMATIONS HAUTE COUTURE (AWWWARDS SILK FEEL) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px) scale(0.985);
+      filter: blur(4px);
+      transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease-out;
+      will-change: opacity, transform, filter;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0px);
+    }
+
+    /* TIMELINE ORGANIC SILK AESTHETICS (AWWWARDS TOP 1% FEEL) */
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-dot {
+      transform: translate(-50%, 0) scale(0.45);
+      opacity: 0.35;
+      background-color: var(--bg-body);
+      border: 2px solid var(--border) !important;
+      box-shadow: none !important;
+      transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1),
+                  opacity 0.8s ease-out,
+                  border-color 0.8s ease,
+                  background-color 0.8s ease,
+                  box-shadow 1s cubic-bezier(0.19, 1, 0.22, 1);
+      will-change: transform, opacity, box-shadow;
+    }
+
+    .timeline-item.active .timeline-dot {
+      transform: translate(-50%, 0) scale(1.15);
+      opacity: 1;
+      border-color: var(--accent) !important;
+      background-color: var(--bg-surface) !important;
+      box-shadow: 0 0 0 5px var(--glow), 0 0 24px var(--glow) !important;
+    }
+
+    .dark .timeline-item.active .timeline-dot {
+      background-color: var(--bg-surface);
+    }
+
+    html:not(.dark) .timeline-item.active .timeline-dot,
+    html.light .timeline-item.active .timeline-dot {
+      background-color: #0F172A !important;
+    }
+
+    /* Entrée directionnelle organique (gauche vs droite) */
+    .timeline-item:nth-child(odd) .timeline-card {
+      opacity: 0;
+      transform: translate3d(-30px, 16px, 0) scale(0.975);
+      filter: blur(5px);
+      transition: opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1),
+                  transform 1.35s cubic-bezier(0.19, 1, 0.22, 1),
+                  filter 1s ease-out;
+      will-change: opacity, transform, filter;
+    }
+
+    .timeline-item:nth-child(even) .timeline-card {
+      opacity: 0;
+      transform: translate3d(30px, 16px, 0) scale(0.975);
+      filter: blur(5px);
+      transition: opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1),
+                  transform 1.35s cubic-bezier(0.19, 1, 0.22, 1),
+                  filter 1s ease-out;
+      will-change: opacity, transform, filter;
+    }
+
+    @media (max-width: 767px) {
+      .timeline-item:nth-child(odd) .timeline-card,
+      .timeline-item:nth-child(even) .timeline-card {
+        transform: translate3d(0, 24px, 0) scale(0.98);
+      }
+    }
+
+    .timeline-item.active .timeline-card {
+      opacity: 1 !important;
+      transform: translate3d(0, 0, 0) scale(1) !important;
+      filter: blur(0px) !important;
+    }
+
+    /* Transition de sortie soyeuse si scroll arrière */
+    .timeline-item:not(.active) .timeline-card {
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out, filter 0.8s ease-out;
+      transition-delay: 0s !important;
+    }
+    .timeline-item:not(.active) .timeline-dot {
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.8s ease-out;
+      transition-delay: 0s !important;
+    }
+
+    /* Stagger transitions — utilisées sur les colonnes stack */
+    .stagger-1 {
+      transition-delay: 0.05s;
+    }
+
+    .stagger-2 {
+      transition-delay: 0.15s;
+    }
+
+    .stagger-3 {
+      transition-delay: 0.25s;
+    }
+
+    .stagger-4 {
+      transition-delay: 0.35s;
+    }
+
+    /* Stagger spéciaux pour les groupes (projets, timeline) */
+    /* Appliqués via JS dynamiquement */
+    .seq-1 {
+      transition-delay: 0s;
+    }
+
+    .seq-2 {
+      transition-delay: 0.15s;
+    }
+
+    .seq-3 {
+      transition-delay: 0.3s;
+    }
+
+    .seq-4 {
+      transition-delay: 0.45s;
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            body: "var(--bg-body)",
+            surface: "var(--bg-surface)",
+            "surface-hover": "var(--bg-surface-hover)",
+            borderColor: "var(--border)",
+            primaryText: "var(--text-primary)",
+            secondaryText: "var(--text-secondary)",
+            tertiaryText: "var(--text-tertiary)",
+            brandAccent: "var(--accent)",
+            brandFlame: "var(--flame)"
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="relative">
+
+  <!-- Awwwards Ambient Cursor Spotlight -->
+  <div id="ambient-spotlight" class="pointer-events-none fixed inset-0 z-10 transition-opacity duration-700"></div>
+
+  <!-- Mobile Header (<1024px) -->
+  <header
+    class="lg:hidden fixed top-0 left-0 right-0 z-40 bg-[var(--bg-body)]/90 backdrop-blur-md border-b border-[var(--border)] px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img id="logo-mobile" src="logo_mj.jpg" alt="Logo MJ"
+        class="w-8 h-8 rounded-lg object-cover border border-[var(--border)] shadow-sm" />
+      <span class="font-bold text-sm text-[var(--text-primary)]">Mélon Joanès AFAGNIBO</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <button id="theme-toggle-mobile" aria-label="Toggle theme"
+        class="p-2 rounded-lg bg-[var(--bg-surface)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]">
+        <span class="material-symbols-outlined text-lg" id="theme-icon-mobile">light_mode</span>
+      </button>
+      <button id="mobile-menu-btn" aria-label="Open menu"
+        class="p-2 rounded-lg bg-[var(--bg-surface)] text-[var(--text-secondary)]">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer"
+    class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden lg:hidden flex flex-col justify-between p-8">
+    <div class="flex flex-col gap-6">
+      <div class="flex items-center justify-between">
+        <span class="text-xl font-bold text-[var(--text-primary)]">Navigation</span>
+        <button id="close-drawer-btn" class="p-2 text-[var(--text-secondary)] hover:text-white">
+          <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-4 text-lg">
+        <a class="drawer-link py-2 text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
+          href="#hero">Accueil</a>
+        <a class="drawer-link py-2 text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
+          href="#projets">Projets</a>
+        <a class="drawer-link py-2 text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
+          href="#stack">Stack</a>
+        <a class="drawer-link py-2 text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
+          href="#parcours">Parcours</a>
+      </nav>
+    </div>
+      <div class="grid grid-cols-2 gap-2">
+        <button type="button"
+          onclick="document.getElementById('cv-modal').showModal(); document.getElementById('mobile-drawer')?.classList.add('hidden');"
+          class="py-3 px-2 rounded-xl bg-[var(--bg-surface)] text-center font-medium border border-[var(--border)] text-[var(--text-primary)] hover:border-[var(--accent)] transition-colors flex items-center justify-center gap-1.5 text-xs sm:text-sm cursor-pointer">
+          <span class="material-symbols-outlined text-base text-[var(--accent)]">visibility</span>
+          <span>Aperçu CV</span>
+        </button>
+        <a href="CV_Melon_Joanes_AFAGNIBO_EN.pdf" download="CV_Melon_Joanes_AFAGNIBO_EN.pdf"
+          class="py-3 px-2 rounded-xl bg-[var(--accent)] text-center font-medium text-white hover:opacity-90 transition-opacity flex items-center justify-center gap-1.5 text-xs sm:text-sm shadow-sm">
+          <span class="material-symbols-outlined text-base">download</span>
+          <span>Télécharger</span>
+        </a>
+      </div>
+      <div class="flex justify-center gap-6 text-[var(--text-secondary)]">
+        <a href="https://github.com/ElFuegoX" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/melon-joanes-afagnibo" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:afagnibomelonjoanes@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="min-h-screen flex flex-col lg:flex-row">
+    <!-- Desktop Sticky Sidebar (Left, ~320px) -->
+    <aside
+      class="w-full lg:w-[320px] lg:fixed lg:top-0 lg:bottom-0 lg:left-0 z-30 bg-[var(--bg-body)]/95 backdrop-blur-md border-r border-[var(--border)] flex flex-col justify-between p-8 overflow-y-auto hidden lg:flex">
+      <div class="flex flex-col gap-8">
+        <!-- Logo MJ & Live Local Time (Awwwards Studio Status) -->
+        <div class="flex items-center justify-between">
+          <a href="#" class="block group" title="Mélon Joanès AFAGNIBO">
+            <img id="logo-desktop" src="logo_mj.jpg" alt="Logo MJ"
+              class="w-10 h-10 rounded-xl object-cover border border-[var(--border)] group-hover:border-[var(--accent)] transition-all duration-300 flame-glow" />
+          </a>
+          <div
+            class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--bg-surface)] border border-[var(--border)] font-mono-code text-[11px] text-[var(--text-secondary)] shadow-sm"
+            title="Heure locale en direct · Bénin (UTC+1)">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-dot"></span>
+            <span class="text-[var(--text-tertiary)]">BJ</span>
+            <span class="text-[var(--border)]">·</span>
+            <span id="live-clock" class="font-medium text-[var(--text-primary)]">--:--</span>
+            <span class="text-[10px] text-[var(--text-tertiary)]">WAT</span>
+          </div>
+        </div>
+
+        <!-- Identity -->
+        <div>
+          <div class="name-reveal-container" title="Survolez pour révéler l'alias">
+            <span class="name-reveal-primary font-bold text-xl text-[var(--accent)]">Mélon Joanès AFAGNIBO</span>
+            <span class="name-reveal-alias font-bold text-xl text-[var(--accent)]">ElFuegoX</span>
+          </div>
+          <p class="mt-2 text-sm text-[var(--text-primary)] font-semibold">Fullstack Web Developer</p>
+          <p class="mt-1 text-sm text-[var(--text-primary)] font-semibold">AI & Data Enthusiast</p>
+          <p class="mt-2 text-xs text-[var(--text-secondary)] font-medium">IFRI · Université d'Abomey-Calavi</p>
+        </div>
+        <div class="dashed-sep"></div>
+
+        <!-- Navigation Links (Sans onglet Contact) -->
+        <nav class="flex flex-col gap-3 text-sm" id="desktop-nav">
+          <a class="nav-link py-2.5 px-3 rounded-lg text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-surface)] transition-all flex items-center gap-3 active"
+            href="#projets">
+            <span class="font-medium">Projets</span>
+          </a>
+          <a class="nav-link py-2.5 px-3 rounded-lg text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-surface)] transition-all flex items-center gap-3"
+            href="#stack">
+            <span class="font-medium">Stack</span>
+          </a>
+          <a class="nav-link py-2.5 px-3 rounded-lg text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-surface)] transition-all flex items-center gap-3"
+            href="#parcours">
+            <span class="font-medium">Parcours</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Bottom Actions & Social -->
+      <div class="flex flex-col gap-5 pt-6">
+        <div class="dashed-sep"></div>
+
+        <!-- CV Button with Preview Popover -->
+        <div class="cv-btn-wrapper">
+          <div class="cv-preview-popup">
+            <div class="text-[11px] font-semibold text-[var(--text-secondary)] uppercase tracking-wider mb-1.5">Aperçu
+              CV</div>
+            <div
+              class="h-28 bg-[var(--bg-body)] rounded border border-[var(--border)] flex flex-col items-center justify-center p-2 text-center">
+              <span class="material-symbols-outlined text-3xl text-[var(--accent)] mb-1">picture_as_pdf</span>
+              <span class="text-xs font-medium text-[var(--text-primary)]">Mélon Joanès AFAGNIBO</span>
+              <span class="text-[10px] text-[var(--text-tertiary)]">Format PDF · Version FR</span>
+            </div>
+            <div class="mt-2 flex gap-1.5 text-[11px]">
+              <button type="button" onclick="document.getElementById('cv-modal').showModal()"
+                class="text-[var(--accent)] hover:underline flex items-center gap-0.5 cursor-pointer font-medium">
+                <span class="material-symbols-outlined text-xs">open_in_new</span> Ouvrir
+              </button>
+              <span class="text-[var(--text-tertiary)]">·</span>
+              <a href="CV_Melon_Joanes_AFAGNIBO_FR.pdf" download="CV_Melon_Joanes_AFAGNIBO_FR.pdf"
+                class="text-[var(--text-secondary)] hover:underline flex items-center gap-0.5 cursor-pointer font-medium">
+                <span class="material-symbols-outlined text-xs">download</span> Télécharger
+              </a>
+            </div>
+          </div>
+
+          <a href="CV_Melon_Joanes_AFAGNIBO_EN.pdf" download="CV_Melon_Joanes_AFAGNIBO_EN.pdf"
+            class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-[var(--bg-surface)] hover:bg-[var(--bg-surface-hover)] text-[var(--text-primary)] text-sm font-medium border border-[var(--border)] transition-colors group">
+            <span class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-base text-[var(--accent)]">description</span>
+              <span>Télécharger CV</span>
+            </span>
+            <span
+              class="material-symbols-outlined text-sm text-[var(--text-tertiary)] group-hover:translate-y-0.5 transition-transform">download</span>
+          </a>
+        </div>
+
+        <div class="dashed-sep"></div>
+
+        <!-- Toggles & Social Links -->
+        <div class="flex items-center justify-between">
+          <!-- Social Icons -->
+          <div class="flex items-center gap-2">
+            <a href="https://github.com/ElFuegoX" target="_blank" rel="noopener noreferrer"
+              class="p-2 rounded-lg text-[var(--text-secondary)] hover:text-[var(--accent)] hover:bg-[var(--bg-surface)] transition-all"
+              title="GitHub">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/melon-joanes-afagnibo" target="_blank" rel="noopener noreferrer"
+              class="p-2 rounded-lg text-[var(--text-secondary)] hover:text-[var(--accent)] hover:bg-[var(--bg-surface)] transition-all"
+              title="LinkedIn">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.979 0 1.778-.773 1.778-1.729V1.73C24 .774 23.205 0 22.225 0z" />
+              </svg>
+            </a>
+            <a href="mailto:afagnibomelonjoanes@gmail.com"
+              class="p-2 rounded-lg text-[var(--text-secondary)] hover:text-[var(--accent)] hover:bg-[var(--bg-surface)] transition-all"
+              title="Email">
+              <span class="material-symbols-outlined text-lg leading-none">mail</span>
+            </a>
+          </div>
+
+          <!-- Toggles (Theme & Lang) -->
+          <div class="flex items-center gap-1.5 text-xs">
+            <button id="lang-toggle"
+              class="px-2 py-1 rounded bg-[var(--bg-surface)] text-[var(--text-secondary)] font-mono-code hover:text-[var(--text-primary)]">
+              <span class="text-[var(--accent)] font-semibold">FR</span> | EN
+            </button>
+            <button id="theme-toggle" aria-label="Toggle theme"
+              class="p-1.5 rounded bg-[var(--bg-surface)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]">
+              <span class="material-symbols-outlined text-base" id="theme-icon">light_mode</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Scrollable Flow (Right) -->
+    <div class="flex-1 lg:pl-[320px] flex flex-col min-h-screen">
+      <main class="flex-1 max-w-[900px] w-full mx-auto px-6 sm:px-12 py-16 lg:py-20 flex flex-col gap-20">
+
+        <!-- SECTION 1: HERO & PRÉSENTATION -->
+        <section class="flex flex-col gap-6 pt-10 lg:pt-0 reveal" id="hero">
+          <!-- Availability Badge -->
+          <div
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 w-fit">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+            <span class="text-xs font-medium text-emerald-400">Disponible pour stages, missions et collaborations</span>
+          </div>
+
+          <!-- Nom & Titre -->
+          <div class="flex flex-col gap-2">
+            <!-- H1 with Hover Reveal -->
+            <div class="name-reveal-container" title="Survolez pour révéler l'alias">
+              <h1
+                class="name-reveal-primary font-serif-title text-4xl sm:text-5xl font-medium tracking-tight text-[var(--accent)]">
+                Mélon Joanès AFAGNIBO
+              </h1>
+              <span class="name-reveal-alias font-serif-title text-4xl sm:text-5xl font-medium tracking-tight text-[var(--accent)]">
+                ElFuegoX
+              </span>
+            </div>
+            <p class="text-lg sm:text-xl text-[var(--text-primary)] font-semibold mt-1">
+              Fullstack Web Developer · AI & Data Enthusiast
+            </p>
+          </div>
+
+          <!-- Paragraphe (gauche) + Photo agrandie (droite) -->
+          <div class="flex flex-col sm:flex-row items-start gap-8">
+            <p class="flex-1 text-base sm:text-[17px] text-[var(--text-secondary)] leading-relaxed font-normal">
+              Je suis en 3ᵉ année de licence en Intelligence Artificielle à l'IFRI (Université d'Abomey-Calavi, Bénin). Ce
+              qui compte pour moi n'est pas d'empiler les technologies pour la forme, mais de choisir la bonne pour le bon
+              problème : un pipeline ML classique pour classer une langue peu dotée, un système RAG là où la recherche
+              documentaire prime, une automatisation n8n là où un modèle serait too much. Et quand le besoin est avant
+              tout produit, je construis l'application complète, de l'architecture backend jusqu'à l'interface. Mon
+              objectif est simple : construire des outils fiables, bien pensés, et qui rendent un vrai service.
+            </p>
+
+            <!-- Photo Personnelle (cliquable avec modale) -->
+            <button id="open-photo-modal" type="button" aria-label="Agrandir la photo"
+              class="relative group shrink-0 cursor-pointer text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] rounded-2xl">
+              <div onclick="document.getElementById('photo-modal').showModal()" 
+                class="w-50 h-60 sm:w-64 sm:h-64 rounded-2xl overflow-hidden border-2 border-[var(--border)] group-hover:border-[var(--accent)] transition-all duration-300 flame-glow bg-[var(--bg-surface)] flex items-center justify-center relative cursor-pointer">
+                <img src="moiIndaba.jpeg" alt="Mélon Joanès AFAGNIBO" class="w-full h-full object-cover object-[50%_15%] group-hover:scale-105 transition-transform duration-500 ease-out"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div
+                  class="hidden flex-col items-center justify-center text-[var(--text-tertiary)] group-hover:text-[var(--accent)] transition-colors p-2 text-center">
+                  <span class="material-symbols-outlined text-3xl">account_circle</span>
+                  <span class="text-[10px] font-mono-code mt-0.5 font-medium">Ta Photo</span>
+                </div>
+              </div>
+            </button>
+          </div>
+        </section>
+
+        <div class="dashed-sep"></div>
+
+        <!-- SECTION 2: PROJETS -->
+        <section class="flex flex-col gap-10 scroll-mt-20" id="projets">
+          <div class="reveal">
+            <h2 class="font-serif-title text-3xl sm:text-4xl font-medium text-[var(--text-primary)]">Projets Phares
+            </h2>
+          </div>
+
+          <!-- A. 4 Projets Principaux (Format texte pur, épuré et percutant) -->
+          <div class="flex flex-col gap-6">
+
+            <!-- Projet 1 : XoNet -->
+            <div class="project-card rounded-2xl border border-[var(--border)] p-6 sm:p-8 flex flex-col gap-4 reveal">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span
+                  class="text-xs px-2.5 py-0.5 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/20 font-mono-code font-medium">
+                  NLP & Machine Learning · Club AIoT IFRI
+                </span>
+                <span class="text-xs text-[var(--text-tertiary)] font-mono-code">En cours (Actif)</span>
+              </div>
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-[var(--text-primary)]">
+                  XoNet — Classification de sentiment & Traitement du Fɔngbe
+                </h3>
+              </div>
+              <p class="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Les outils d'analyse textuelle ignorent la plupart des langues africaines sous-dotées comme le fon,
+                faute de données annotées suffisantes. XoNet comble ce vide avec un classifieur de sentiment et un
+                traducteur fon-français entraîné sur un corpus parallèle de 87 126 lignes. Pour traiter le fort
+                déséquilibre des classes, le pipeline combine vectorisation TF-IDF, rééquilibrage par SMOTE et un modèle
+                d'ensemble en Soft Voting.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-1 font-mono-code text-xs text-[var(--text-tertiary)]">
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">Python</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">Scikit-Learn</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">SMOTE</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">Pandas</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">NLP</span>
+              </div>
+              <div class="pt-2 flex items-center gap-4 text-xs font-semibold text-[var(--accent)]">
+                <a href="https://github.com/ElFuegoX" target="_blank" rel="noopener noreferrer"
+                  class="hover:underline flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm">code</span> Code source GitHub
+                </a>
+              </div>
+            </div>
+
+            <!-- Projet 2 : VoiceNote -->
+            <div class="project-card rounded-2xl border border-[var(--border)] p-6 sm:p-8 flex flex-col gap-4 reveal">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span
+                  class="text-xs px-2.5 py-0.5 rounded-full bg-orange-500/10 text-[var(--accent)] border border-orange-500/20 font-mono-code font-medium">
+                  Speech-to-Text & Web Architecture · Personnel
+                </span>
+                <span class="text-xs text-emerald-400 font-mono-code">● Déployé en production</span>
+              </div>
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-[var(--text-primary)]">
+                  VoiceNote — Transcription vocale instantanée & PWA
+                </h3>
+              </div>
+              <p class="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Prendre une note vocale doit être aussi rapide que de parler. VoiceNote est une Progressive Web App
+                (PWA) utilisable immédiatement, sans inscription, avec isolation locale des notes par appareil. La
+                transcription audio s'appuie sur Whisper via Groq Cloud (latence record d'environ 300 ms) et intègre un
+                fallback local sur Faster-Whisper afin de garantir la disponibilité même en cas d'instabilité réseau.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-1 font-mono-code text-xs text-[var(--text-tertiary)]">
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">React 18</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">TypeScript</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">Vite</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">FastAPI</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">Groq Whisper</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">Tailwind CSS</span>
+              </div>
+              <div class="pt-2 flex items-center gap-4 text-xs font-semibold text-[var(--accent)]">
+                <a href="https://voice-note-ebon.vercel.app" target="_blank" rel="noopener noreferrer"
+                  class="hover:underline flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm">open_in_new</span> voice-note-ebon.vercel.app
+                </a>
+                <a href="https://github.com/ElFuegoX" target="_blank" rel="noopener noreferrer"
+                  class="hover:underline flex items-center gap-1 text-[var(--text-secondary)]">
+                  <span class="material-symbols-outlined text-sm">code</span> GitHub
+                </a>
+              </div>
+            </div>
+
+            <!-- Projet 3 : Lex & BRVM Copilot -->
+            <div class="project-card rounded-2xl border border-[var(--border)] p-6 sm:p-8 flex flex-col gap-4 reveal">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span
+                  class="text-xs px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 font-mono-code font-medium">
+                  RAG Avancé & Systèmes Décisionnels · Personnel
+                </span>
+                <span class="text-xs text-[var(--text-tertiary)] font-mono-code">Prototype / En cours</span>
+              </div>
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-[var(--text-primary)]">
+                  Lex & BRVM Copilot — RAG Réglementaire & Financier
+                </h3>
+              </div>
+              <p class="text-sm text-[var(--text-secondary)] leading-relaxed">
+                L'accès aux textes juridiques (Code du Numérique béninois) et aux états financiers des entreprises de la
+                zone UEMOA est freiné par des centaines de pages de documents PDF complexes. Ce système RAG implémente
+                une recherche hybride (BM25 + embeddings denses) et du reranking pour extraire articles de lois et
+                ratios financiers sans hallucination, avec citation systématique des sources officielles.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-1 font-mono-code text-xs text-[var(--text-tertiary)]">
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">Python</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">LangChain</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">FAISS</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">FastAPI</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">Groq API</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">Next.js</span>
+              </div>
+              <div class="pt-2 flex items-center gap-4 text-xs font-semibold text-[var(--accent)]">
+                <a href="https://github.com/ElFuegoX" target="_blank" rel="noopener noreferrer"
+                  class="hover:underline flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm">code</span> Dépôt GitHub
+                </a>
+              </div>
+            </div>
+
+            <!-- Projet 4 : Dimension AC -->
+            <div class="project-card rounded-2xl border border-[var(--border)] p-6 sm:p-8 flex flex-col gap-4 reveal">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span
+                  class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono-code font-medium">
+                  Plateformes Full-Stack en Production · Dimension AC
+                </span>
+                <span class="text-xs text-emerald-400 font-mono-code">● En production</span>
+              </div>
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-[var(--text-primary)]">
+                  Dimension AC — DM Arena & DM Partners
+                </h3>
+              </div>
+              <p class="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Conception et déploiement des infrastructures web de la marque de vêtements Dimension AC sous deux
+                plateformes dédiées :<br />
+                • <strong>DM Arena</strong> : Plateforme événementielle gérant la billetterie et le suivi en
+                direct.<br />
+                • <strong>DM Partners</strong> : Marketplace vendeurs permettant aux partenaires commerciaux de gérer
+                leur boutique et de suivre leurs ventes en totale autonomie.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-1 font-mono-code text-xs text-[var(--text-tertiary)]">
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">React</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">Next.js</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">TypeScript</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">FastAPI</span>
+                <span class="px-2.5 py-1 rounded bg-[var(--bg-body)] border border-[var(--border)]">Supabase</span>
+              </div>
+              <div class="pt-2 flex flex-wrap items-center gap-4 text-xs font-semibold text-[var(--accent)]">
+                <a href="https://dm-arena1.vercel.app" target="_blank" rel="noopener noreferrer"
+                  class="hover:underline flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm">open_in_new</span> dm-arena1.vercel.app
+                </a>
+                <a href="https://dm-partners.store" target="_blank" rel="noopener noreferrer"
+                  class="hover:underline flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm">open_in_new</span> dm-partners.store
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- B. Autres Réalisations (Format Compact) -->
+          <div class="flex flex-col gap-4 pt-4 reveal">
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-[var(--text-tertiary)] font-mono-code">
+              Autres Réalisations & Expérimentations
+            </h4>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <!-- Item 1: n8n -->
+              <div
+                class="p-5 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] hover:border-[var(--accent)] transition-all flex flex-col justify-between gap-3">
+                <div class="flex flex-col gap-1.5">
+                  <span class="text-xs font-bold text-[var(--text-primary)]">Automatisations & IA (n8n)</span>
+                  <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                    Pipelines de classification d'e-mails (NovekAI), alertes Telegram de taux de change, veille eBay
+                    OAuth2 et intégration LLM.
+                  </p>
+                </div>
+                <div class="flex flex-wrap gap-1 font-mono-code text-[11px] text-[var(--text-tertiary)]">
+                  <span>#n8n</span> · <span>#LLMs</span> · <span>#Webhooks</span>
+                </div>
+              </div>
+
+              <!-- Item 2: 100 Days of ML -->
+              <div
+                class="p-5 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] hover:border-[var(--accent)] transition-all flex flex-col justify-between gap-3">
+                <div class="flex flex-col gap-1.5">
+                  <span class="text-xs font-bold text-[var(--text-primary)]">100 Days of ML Challenge</span>
+                  <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                    Implémentation et entraînement de 100 algorithmes Machine & Deep Learning : régression, BERT, GPT et
+                    architectures GANs.
+                  </p>
+                </div>
+                <a href="https://github.com/ElFuegoX/100DaysofML" target="_blank" rel="noopener noreferrer"
+                  class="text-xs font-medium text-[var(--accent)] hover:underline flex items-center gap-1 font-mono-code">
+                  <span>github.com/100DaysofML</span> →
+                </a>
+              </div>
+
+              <!-- Item 3: Thomas RAG -->
+              <div
+                class="p-5 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] hover:border-[var(--accent)] transition-all flex flex-col justify-between gap-3">
+                <div class="flex flex-col gap-1.5">
+                  <span class="text-xs font-bold text-[var(--text-primary)]">Thomas — RAG Biblique</span>
+                  <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+                    Démonstrateur de recherche sémantique documentaire sur corpus textuel, déployé avec interface
+                    interactive sur Hugging Face Spaces.
+                  </p>
+                </div>
+                <a href="https://huggingface.co/spaces/ElFuegoX/Bible_bot" target="_blank" rel="noopener noreferrer"
+                  class="text-xs font-medium text-[var(--accent)] hover:underline flex items-center gap-1 font-mono-code">
+                  <span>HuggingFace Spaces</span> →
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="dashed-sep"></div>
+
+        <!-- SECTION 3: SOCLE TECHNIQUE (STACK DOCK) -->
+        <section class="flex flex-col gap-8 scroll-mt-20" id="stack">
+          <div class="reveal">
+            <h2 class="font-serif-title text-3xl sm:text-4xl font-medium text-[var(--text-primary)]">Socle
+              Technique</h2>
+            <p class="text-sm text-[var(--text-secondary)] mt-1">Les outils que j'utilise au quotidien.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Col 1: IA & Data -->
+            <div
+              class="flex flex-col gap-3 p-5 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] reveal stagger-1">
+              <div class="flex items-center gap-2 pb-2 border-b border-[var(--border)]">
+                <span class="text-lg">🧠</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-[var(--text-primary)]">IA & Data</span>
+              </div>
+              <div class="dock-container pt-1">
+                <span class="dock-pill">Python</span>
+                <span class="dock-pill">PyTorch</span>
+                <span class="dock-pill">Scikit-learn</span>
+                <span class="dock-pill">LangChain</span>
+                <span class="dock-pill">FAISS / RAG</span>
+                <span class="dock-pill">Pandas / NumPy</span>
+                <span class="dock-pill">TensorFlow</span>
+              </div>
+            </div>
+
+            <!-- Col 2: Frontend -->
+            <div
+              class="flex flex-col gap-3 p-5 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] reveal stagger-2">
+              <div class="flex items-center gap-2 pb-2 border-b border-[var(--border)]">
+                <span class="text-lg">🌐</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-[var(--text-primary)]">Frontend</span>
+              </div>
+              <div class="dock-container pt-1">
+                <span class="dock-pill">React 18</span>
+                <span class="dock-pill">Next.js</span>
+                <span class="dock-pill">TypeScript</span>
+                <span class="dock-pill">Tailwind CSS</span>
+                <span class="dock-pill">Vite</span>
+                <span class="dock-pill">Figma</span>
+              </div>
+            </div>
+
+            <!-- Col 3: Backend -->
+            <div
+              class="flex flex-col gap-3 p-5 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] reveal stagger-3">
+              <div class="flex items-center gap-2 pb-2 border-b border-[var(--border)]">
+                <span class="text-lg">⚙️</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-[var(--text-primary)]">Backend</span>
+              </div>
+              <div class="dock-container pt-1">
+                <span class="dock-pill">FastAPI</span>
+                <span class="dock-pill">Supabase</span>
+                <span class="dock-pill">PostgreSQL</span>
+                <span class="dock-pill">Node.js</span>
+                <span class="dock-pill">REST APIs</span>
+                <span class="dock-pill">n8n</span>
+              </div>
+            </div>
+
+            <!-- Col 4: DevOps & Outils -->
+            <div
+              class="flex flex-col gap-3 p-5 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] reveal stagger-4">
+              <div class="flex items-center gap-2 pb-2 border-b border-[var(--border)]">
+                <span class="text-lg">🔧</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-[var(--text-primary)]">DevOps</span>
+              </div>
+              <div class="dock-container pt-1">
+                <span class="dock-pill">Git / GitHub</span>
+                <span class="dock-pill">Docker</span>
+                <span class="dock-pill">GitHub Actions</span>
+                <span class="dock-pill">Linux / Bash</span>
+                <span class="dock-pill">Vercel</span>
+                <span class="dock-pill">Render</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="dashed-sep"></div>
+
+        <!-- SECTION 4: PARCOURS & EXPÉRIENCES (TIMELINE ALTERNÉE DE PART ET D'AUTRE) -->
+        <section class="flex flex-col gap-10 scroll-mt-20" id="parcours">
+          <div class="reveal">
+            <h2 class="font-serif-title text-3xl sm:text-4xl font-medium text-[var(--text-primary)]">Parcours &
+              Expériences</h2>
+            <p class="text-sm text-[var(--text-secondary)] mt-1">Expériences professionnelles et académiques.</p>
+          </div>
+
+          <!-- Alternating Timeline Container -->
+          <div class="relative py-4" id="timeline-wrapper">
+            <!-- Central Spine (Desktop) / Left Line (Mobile) -->
+            <div
+              class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-[var(--border)] to-transparent opacity-60">
+            </div>
+            <!-- Dynamic Glowing Laser Spine (Scroll-driven progress) -->
+            <div id="timeline-laser"
+              class="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-[2px] h-0 bg-gradient-to-b from-[var(--accent)] via-[var(--flame)] to-[var(--accent)] shadow-[0_0_14px_var(--glow)] pointer-events-none rounded-full transition-all duration-100 ease-out z-0">
+            </div>
+
+            <div class="flex flex-col gap-12 sm:gap-14">
+
+              <!-- Item 1: NovekAI (LEFT) -->
+              <div class="timeline-item relative flex flex-col md:flex-row items-center w-full">
+                <!-- Center Dot -->
+                <div
+                  class="timeline-dot absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[var(--bg-body)] border-2 border-[var(--accent)] z-10 flame-glow">
+                </div>
+
+                <!-- Content Card (Left on Desktop) -->
+                <div class="timeline-card w-full md:w-[46%] ml-10 md:ml-0 md:mr-auto pl-2 md:pl-0 md:pr-8">
+                  <div
+                    class="p-6 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] hover:border-[var(--accent)] transition-all flex flex-col gap-2 shadow-sm">
+                    <div class="flex flex-wrap items-center justify-between gap-1">
+                      <span
+                        class="text-xs font-mono-code text-[var(--accent)] font-semibold uppercase tracking-wider">Juin
+                        2026 – Juillet 2026</span>
+                      <span
+                        class="text-[11px] font-mono-code text-[var(--text-tertiary)] bg-[var(--bg-body)] px-2 py-0.5 rounded border border-[var(--border)]">Stage
+                        ML</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-[var(--text-primary)]">Machine Learning Intern · NovekAI</h3>
+                    <p class="text-xs text-[var(--text-secondary)] leading-relaxed mt-1">
+                      <strong>Pipeline ML & Analyse prédictive :</strong> Conception d'un pipeline complet de
+                      modélisation sur des données événementielles : ingestion, nettoyage, ingénierie de features
+                      (indicateurs de performance historiques, cotes probabilistes) et entraînement de modèles de
+                      classification et ranking.<br />
+                      <strong>Automatisation :</strong> Chatbot interne et automatisation du traitement des e-mails par
+                      LLM via n8n.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 pt-2 font-mono-code text-[11px] text-[var(--text-tertiary)]">
+                      <span class="px-2 py-0.5 rounded bg-[var(--bg-body)] border border-[var(--border)]">Python</span>
+                      <span class="px-2 py-0.5 rounded bg-[var(--bg-body)] border border-[var(--border)]">Pandas</span>
+                      <span
+                        class="px-2 py-0.5 rounded bg-[var(--bg-body)] border border-[var(--border)]">Scikit-Learn</span>
+                      <span class="px-2 py-0.5 rounded bg-[var(--bg-body)] border border-[var(--border)]">n8n</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2: Dimension AC (RIGHT) -->
+              <div class="timeline-item relative flex flex-col md:flex-row items-center w-full">
+                <!-- Center Dot -->
+                <div
+                  class="timeline-dot absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[var(--bg-body)] border-2 border-[var(--accent)] z-10 flame-glow">
+                </div>
+
+                <!-- Content Card (Right on Desktop) -->
+                <div class="timeline-card w-full md:w-[46%] ml-10 md:ml-auto pl-2 md:pl-8">
+                  <div
+                    class="p-6 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] hover:border-[var(--accent)] transition-all flex flex-col gap-2 shadow-sm">
+                    <div class="flex flex-wrap items-center justify-between gap-1">
+                      <span
+                        class="text-xs font-mono-code text-[var(--accent)] font-semibold uppercase tracking-wider">2025
+                        – 2026</span>
+                      <span
+                        class="text-[11px] font-mono-code text-[var(--text-tertiary)] bg-[var(--bg-body)] px-2 py-0.5 rounded border border-[var(--border)]">Leadership
+                        Tech</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-[var(--text-primary)]">Co-Directeur Technique · Dimension AC</h3>
+                    <p class="text-xs text-[var(--text-secondary)] leading-relaxed mt-1">
+                      <strong>Architecture logicielle :</strong> Conception de bout en bout des plateformes numériques
+                      de la marque : DM Arena (billetterie & live) et DM Partners (marketplace vendeurs).<br />
+                      <strong>Pilotage :</strong> Coordination des développeurs, revues de code, CI/CD, déploiement sur
+                      Vercel et Supabase.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 pt-2 font-mono-code text-[11px] text-[var(--text-tertiary)]">
+                      <span class="px-2 py-0.5 rounded bg-[var(--bg-body)] border border-[var(--border)]">Next.js</span>
+                      <span class="px-2 py-0.5 rounded bg-[var(--bg-body)] border border-[var(--border)]">FastAPI</span>
+                      <span
+                        class="px-2 py-0.5 rounded bg-[var(--bg-body)] border border-[var(--border)]">Supabase</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3: IndabaX Bénin (LEFT) -->
+              <div class="timeline-item relative flex flex-col md:flex-row items-center w-full">
+                <!-- Center Dot -->
+                <div
+                  class="timeline-dot absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[var(--bg-body)] border-2 border-[var(--accent)] z-10 flame-glow">
+                </div>
+
+                <!-- Content Card (Left on Desktop) -->
+                <div class="timeline-card w-full md:w-[46%] ml-10 md:ml-0 md:mr-auto pl-2 md:pl-0 md:pr-8">
+                  <div
+                    class="p-6 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] hover:border-[var(--accent)] transition-all flex flex-col gap-2 shadow-sm">
+                    <div class="flex flex-wrap items-center justify-between gap-1">
+                      <span
+                        class="text-xs font-mono-code text-[var(--accent)] font-semibold uppercase tracking-wider">2024
+                        – 2026</span>
+                      <span
+                        class="text-[11px] font-mono-code text-[var(--text-tertiary)] bg-[var(--bg-body)] px-2 py-0.5 rounded border border-[var(--border)]">Bénévolat
+                        IA</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-[var(--text-primary)]">Organisateur bénévole · IndabaX Bénin</h3>
+                    <p class="text-xs text-[var(--text-secondary)] leading-relaxed mt-1">
+                      <strong>Engagement & Continuité :</strong> Participant assidu 2024/2025, puis intégré au comité
+                      d'organisation 2026.<br />
+                      <strong>Logistique & Opérations :</strong> Accueil des boursiers, hébergements, déplacements et
+                      support direct lors des plénières et ateliers pratiques.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 pt-2 font-mono-code text-[11px] text-[var(--text-tertiary)]">
+                      <span
+                        class="px-2 py-0.5 rounded bg-[var(--bg-body)] border border-[var(--border)]">Logistique</span>
+                      <span
+                        class="px-2 py-0.5 rounded bg-[var(--bg-body)] border border-[var(--border)]">Opérations</span>
+                      <span class="px-2 py-0.5 rounded bg-[var(--bg-body)] border border-[var(--border)]">IndabaX</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4: IFRI UAC (RIGHT) -->
+              <div class="timeline-item relative flex flex-col md:flex-row items-center w-full">
+                <!-- Center Dot -->
+                <div
+                  class="timeline-dot absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[var(--bg-body)] border-2 border-[var(--accent)] z-10 flame-glow">
+                </div>
+
+                <!-- Content Card (Right on Desktop) -->
+                <div class="timeline-card w-full md:w-[46%] ml-10 md:ml-auto pl-2 md:pl-8">
+                  <div
+                    class="p-6 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] hover:border-[var(--accent)] transition-all flex flex-col gap-2 shadow-sm">
+                    <div class="flex flex-wrap items-center justify-between gap-1">
+                      <span
+                        class="text-xs font-mono-code text-[var(--accent)] font-semibold uppercase tracking-wider">2024
+                        – 2027 (3ᵉ année)</span>
+                      <span
+                        class="text-[11px] font-mono-code text-[var(--text-tertiary)] bg-[var(--bg-body)] px-2 py-0.5 rounded border border-[var(--border)]">Formation</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-[var(--text-primary)]">Licence Pro. Intelligence Artificielle ·
+                      IFRI</h3>
+                    <p class="text-xs text-[var(--text-tertiary)]">Université d'Abomey-Calavi (UAC)</p>
+                    <p class="text-xs text-[var(--text-secondary)] leading-relaxed mt-1">
+                      <strong>Cursus :</strong> Mathématiques appliquées (algèbre linéaire, probabilités, optimisation),
+                      algorithmique avancée, Machine & Deep Learning (NLP, Computer Vision) et génie logiciel.<br />
+                      <strong>Club AIoT :</strong> Membre actif — conception de pipelines NLP (projet XoNet) et ateliers
+                      techniques.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 pt-2 font-mono-code text-[11px] text-[var(--text-tertiary)]">
+                      <span class="px-2 py-0.5 rounded bg-[var(--bg-body)] border border-[var(--border)]">Machine
+                        Learning</span>
+                      <span class="px-2 py-0.5 rounded bg-[var(--bg-body)] border border-[var(--border)]">Génie
+                        Logiciel</span>
+                      <span class="px-2 py-0.5 rounded bg-[var(--bg-body)] border border-[var(--border)]">IFRI</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- FOOTER & CONNECT HUB (Rounded 3XL, Grand Margin-Top, Lueur feutrée) -->
+        <footer class="mt-24 pt-14 pb-16 px-6 sm:px-10 rounded-3xl border border-dashed border-[var(--accent)]/40 bg-[var(--bg-surface)]/40 backdrop-blur-sm flex flex-col items-center gap-8 text-center reveal relative shadow-lg">
+          <!-- Ligne de lueur d'ambiance discrète sur le top border -->
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[var(--accent)]/50 to-transparent blur-[1px] pointer-events-none"></div>
+          <!-- Connect Hub Header -->
+          <div class="flex flex-col items-center gap-1.5 max-w-md">
+            <span class="font-mono-code text-xs text-[var(--accent)] uppercase tracking-wider font-semibold">Connect &
+              Collab</span>
+            <h3 class="font-serif-title text-2xl sm:text-3xl font-medium text-[var(--text-primary)]">Restons en contact
+            </h3>
+            <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+              Toujours ouvert aux échanges passionnants, missions stimulantes et projets de recherche.
+            </p>
+          </div>
+
+          <!-- 3 Grandes Icônes Directes & Minimalistes -->
+          <div class="flex flex-wrap justify-center items-center gap-5 sm:gap-8">
+            <!-- Email -->
+            <a href="mailto:afagnibomelonjoanes@gmail.com"
+              class="p-5 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] hover:border-[var(--accent)] hover:-translate-y-1.5 transition-all flex flex-col items-center gap-2 group w-32 sm:w-36 shadow-sm">
+              <span
+                class="material-symbols-outlined text-3xl text-[var(--text-secondary)] group-hover:text-[var(--accent)] transition-colors">mail</span>
+              <span class="text-xs font-semibold text-[var(--text-primary)]">Email</span>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/ElFuegoX" target="_blank" rel="noopener noreferrer"
+              class="p-5 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] hover:border-[var(--accent)] hover:-translate-y-1.5 transition-all flex flex-col items-center gap-2 group w-32 sm:w-36 shadow-sm">
+              <svg class="w-7 h-7 fill-[var(--text-secondary)] group-hover:fill-[var(--accent)] transition-colors"
+                viewBox="0 0 24 24">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              <span class="text-xs font-semibold text-[var(--text-primary)]">GitHub</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/melon-joanes-afagnibo" target="_blank" rel="noopener noreferrer"
+              class="p-5 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] hover:border-[var(--accent)] hover:-translate-y-1.5 transition-all flex flex-col items-center gap-2 group w-32 sm:w-36 shadow-sm">
+              <svg class="w-7 h-7 fill-[var(--text-secondary)] group-hover:fill-[var(--accent)] transition-colors"
+                viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.979 0 1.778-.773 1.778-1.729V1.73C24 .774 23.205 0 22.225 0z" />
+              </svg>
+              <span class="text-xs font-semibold text-[var(--text-primary)]">LinkedIn</span>
+            </a>
+          </div>
+
+          <!-- Flip Reveal Signature -->
+          <div class="text-xs text-[var(--text-tertiary)] flex items-center gap-1.5 flex-wrap justify-center pt-6">
+            <span>Conçu & développé par</span>
+            <div class="name-reveal-container" title="Survolez pour révéler l'alias">
+              <span class="name-reveal-primary font-semibold text-[var(--accent)]">Mélon Joanès AFAGNIBO</span>
+              <span class="name-reveal-alias font-semibold text-[var(--accent)]">ElFuegoX</span>
+            </div>
+            <span>· © 2026</span>
+          </div>
+        </footer>
+
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // 1. Initialize Lenis Smooth Scroll
+    let lenis;
+    if (typeof Lenis !== 'undefined') {
+      lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+      });
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    }
+
+    // 2. Scroll Reveal Animations (IntersectionObserver)
+    // -- Live Local Time (Bénin · UTC+1 / West Africa Time) --
+    const liveClock = document.getElementById('live-clock');
+    if (liveClock) {
+      const updateClock = () => {
+        try {
+          const now = new Date();
+          const timeStr = new Intl.DateTimeFormat('fr-FR', {
+            timeZone: 'Africa/Porto-Novo',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false
+          }).format(now);
+          liveClock.textContent = timeStr;
+        } catch (e) {
+          const d = new Date();
+          liveClock.textContent = `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+        }
+      };
+      updateClock();
+      setInterval(updateClock, 10000);
+    }
+
+    // -- Stagger automatique : projets et timeline en one-by-one --
+
+    // Projets principaux : chaque carte reçoit un délai en cascade
+    const projectCards = document.querySelectorAll('#projets .project-card');
+    projectCards.forEach((card, i) => {
+      card.style.transitionDelay = `${i * 0.22}s`;
+    });
+
+    // Petites cartes projets secondaires
+    const miniCards = document.querySelectorAll('#projets .grid > div');
+    miniCards.forEach((card, i) => {
+      card.style.transitionDelay = `${i * 0.12}s`;
+    });
+
+    // Awwwards Ambient Spotlight Follower
+    window.addEventListener('mousemove', (e) => {
+      document.documentElement.style.setProperty('--cursor-x', `${e.clientX}px`);
+      document.documentElement.style.setProperty('--cursor-y', `${e.clientY}px`);
+    }, { passive: true });
+
+    // Observer pour les reveals généraux (titres, etc.)
+    const revealElements = document.querySelectorAll('.reveal');
+    const observerOptions = {
+      threshold: 0.12,
+      rootMargin: '-6% 0px -6% 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        } else {
+          entry.target.classList.remove('active');
+        }
+      });
+    }, observerOptions);
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Spine laser interactif : C'est la lumière qui allume et éteint les points & cartes en direct !
+    const timelineWrapper = document.getElementById('timeline-wrapper');
+    const timelineLaser = document.getElementById('timeline-laser');
+    const timelineItems = timelineWrapper ? timelineWrapper.querySelectorAll('.timeline-item') : [];
+
+    if (timelineWrapper && timelineLaser) {
+      let ticking = false;
+      const updateTimelineLaser = () => {
+        const rect = timelineWrapper.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        // La pointe du laser progresse quand le container est visible
+        const triggerPoint = windowHeight * 0.65;
+        const progress = triggerPoint - rect.top;
+        const totalHeight = rect.height;
+
+        const laserHeight = Math.max(0, Math.min(progress, totalHeight));
+        timelineLaser.style.height = `${laserHeight}px`;
+
+        // Position Y de la pointe du laser dans le viewport
+        const laserTipY = rect.top + laserHeight;
+
+        // Synchronisation millimétrique : la lumière allume le point dès qu'elle le touche
+        timelineItems.forEach(item => {
+          const dot = item.querySelector('.timeline-dot');
+          if (dot) {
+            const dotRect = dot.getBoundingClientRect();
+            const dotCenterY = dotRect.top + (dotRect.height / 2);
+
+            if (laserTipY >= dotCenterY - 4) {
+              item.classList.add('active');
+            } else {
+              item.classList.remove('active');
+            }
+          }
+        });
+
+        ticking = false;
+      };
+
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(updateTimelineLaser);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      window.addEventListener('resize', () => {
+        requestAnimationFrame(updateTimelineLaser);
+      }, { passive: true });
+
+      updateTimelineLaser();
+    }
+
+    // 3. Theme Toggle Logic (avec bascule dynamique du logo flamme orange <-> bleu azur)
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeIconMobile = document.getElementById('theme-icon-mobile');
+    const logoDesktop = document.getElementById('logo-desktop');
+    const logoMobile = document.getElementById('logo-mobile');
+    const siteFavicon = document.querySelector('link[rel="icon"]');
+
+    function applyTheme(isDark) {
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+        document.body.classList.add('dark');
+        document.body.classList.remove('light');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+        document.body.classList.remove('dark');
+        document.body.classList.add('light');
+      }
+
+      const logoSrc = isDark ? 'logo_mj.jpg' : 'logo_mj_light.png';
+      if (logoDesktop) logoDesktop.src = logoSrc;
+      if (logoMobile) logoMobile.src = logoSrc;
+      if (siteFavicon) siteFavicon.href = logoSrc;
+
+      // En mode sombre → montrer soleil (pour indiquer qu'on peut passer au clair)
+      // En mode clair → montrer lune (pour indiquer qu'on peut passer au sombre)
+      const iconName = isDark ? 'light_mode' : 'dark_mode';
+      if (themeIcon) themeIcon.textContent = iconName;
+      if (themeIconMobile) themeIconMobile.textContent = iconName;
+
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    function toggleTheme() {
+      const currentlyDark = document.documentElement.classList.contains('dark');
+      applyTheme(!currentlyDark);
+    }
+
+    if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+    if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+
+    // Initial theme check
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      applyTheme(false);
+    } else {
+      applyTheme(true);
+    }
+
+    // 4. Mobile Drawer Logic
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeDrawerBtn = document.getElementById('close-drawer-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const drawerLinks = document.querySelectorAll('.drawer-link');
+
+    if (mobileMenuBtn && mobileDrawer) {
+      mobileMenuBtn.addEventListener('click', () => mobileDrawer.classList.remove('hidden'));
+    }
+    if (closeDrawerBtn && mobileDrawer) {
+      closeDrawerBtn.addEventListener('click', () => mobileDrawer.classList.add('hidden'));
+    }
+    drawerLinks.forEach(link => {
+      link.addEventListener('click', () => mobileDrawer.classList.add('hidden'));
+    });
+
+    // 5. Scroll Spy Logic (01 Projets, 02 Stack, 03 Parcours)
+    const navLinks = document.querySelectorAll('#desktop-nav .nav-link');
+    const sections = [
+      document.getElementById('projets'),
+      document.getElementById('stack'),
+      document.getElementById('parcours')
+    ].filter(Boolean);
+
+    window.addEventListener('scroll', () => {
+      let currentSectionId = '';
+      const scrollPos = window.scrollY + 220;
+
+      sections.forEach(section => {
+        if (section.offsetTop <= scrollPos) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href').replace('#', '');
+        if (href === currentSectionId) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    });
+
+    // 6. Photo Lightbox Modal
+    const photoModal = document.getElementById('photo-modal');
+    const openPhotoBtn = document.getElementById('open-photo-modal');
+    const closePhotoBtn = document.getElementById('close-photo-modal');
+
+    if (photoModal && openPhotoBtn) {
+      const openModal = () => {
+        photoModal.classList.remove('hidden');
+        photoModal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      };
+      const closeModal = () => {
+        photoModal.classList.add('hidden');
+        photoModal.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      openPhotoBtn.addEventListener('click', openModal);
+      if (closePhotoBtn) closePhotoBtn.addEventListener('click', closeModal);
+      photoModal.addEventListener('click', (e) => {
+        if (e.target === photoModal) closeModal();
+      });
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !photoModal.classList.contains('hidden')) {
+          closeModal();
+        }
+      });
+    }
+  </script>
+
+  <!-- Photo Lightbox Modal Structure -->
+  <dialog id="photo-modal"
+    class="fixed inset-0 z-50 items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md transition-opacity duration-300">
+    <div
+      class="relative max-w-xl w-full bg-[var(--bg-surface)] border border-[var(--border)] rounded-3xl p-3 sm:p-4 shadow-2xl flex flex-col items-center animate-in fade-in zoom-in-95 duration-200">
+      <button id="close-photo-modal" type="button" aria-label="Fermer"
+        onclick="document.getElementById('photo-modal').close()"
+        class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-[var(--bg-surface)] border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--accent)] flex items-center justify-center transition-colors shadow-xl z-20 cursor-pointer">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+      <div class="w-full max-h-[78vh] overflow-hidden rounded-2xl flex items-center justify-center bg-black/30">
+        <img src="moiIndaba.jpeg" alt="Mélon Joanès AFAGNIBO"
+          class="w-full h-auto max-h-[78vh] object-contain rounded-2xl" />
+      </div>
+      <div class="w-full flex items-center justify-between px-2 pt-3">
+        <p class="text-sm font-medium text-[var(--text-primary)]">Mélon Joanès AFAGNIBO</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- CV Viewer Modal Structure (Option C) -->
+  <dialog id="cv-modal"
+    class="p-0 rounded-3xl bg-transparent border-none outline-none backdrop:bg-black/85 backdrop:backdrop-blur-md m-auto max-w-4xl w-[94%] shadow-2xl"
+    onclick="if (event.target === this) this.close()">
+    <div
+      class="relative w-full bg-[var(--bg-surface)] border border-[var(--border)] rounded-3xl p-4 sm:p-6 shadow-2xl flex flex-col gap-4 animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- En-tête de la visionneuse -->
+      <div class="flex items-center justify-between border-b border-[var(--border)] pb-3">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center text-[var(--accent)]">
+            <span class="material-symbols-outlined text-2xl">picture_as_pdf</span>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-[var(--text-primary)]">Curriculum Vitae</h3>
+            <p class="text-xs font-mono-code text-[var(--text-tertiary)]">Mélon Joanès AFAGNIBO</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="CV_Melon_Joanes_AFAGNIBO_FR.pdf" download="CV_Melon_Joanes_AFAGNIBO_FR.pdf"
+            class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[var(--bg-surface-hover)] hover:opacity-90 text-[var(--text-primary)] text-xs font-medium border border-[var(--border)] transition-all">
+            <span class="material-symbols-outlined text-sm">download</span>
+            <span>Version FR</span>
+          </a>
+          <a href="CV_Melon_Joanes_AFAGNIBO_EN.pdf" download="CV_Melon_Joanes_AFAGNIBO_EN.pdf"
+            class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[var(--accent)] hover:opacity-90 text-white text-xs font-medium transition-all shadow-sm">
+            <span class="material-symbols-outlined text-sm">download</span>
+            <span>Version EN</span>
+          </a>
+          <button type="button" aria-label="Fermer" onclick="document.getElementById('cv-modal').close()"
+            class="w-9 h-9 rounded-full bg-[var(--bg-surface)] border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--accent)] flex items-center justify-center transition-colors shadow-sm cursor-pointer">
+            <span class="material-symbols-outlined text-xl">close</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cadre d'affichage du PDF -->
+      <div class="w-full h-[68vh] sm:h-[74vh] bg-[var(--bg-body)] rounded-2xl overflow-hidden border border-[var(--border)] relative">
+        <iframe src="CV_Melon_Joanes_AFAGNIBO_EN.pdf#view=FitH" class="w-full h-full rounded-2xl" frameborder="0">
+          <div class="w-full h-full flex flex-col items-center justify-center p-6 text-center gap-3">
+            <p class="text-sm text-[var(--text-primary)]">Aperçu direct non disponible sur ce navigateur.</p>
+            <a href="CV_Melon_Joanes_AFAGNIBO_EN.pdf" download="CV_Melon_Joanes_AFAGNIBO_EN.pdf"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[var(--accent)] text-white text-xs font-medium shadow-md">
+              <span class="material-symbols-outlined text-sm">download</span>
+              <span>Télécharger le CV</span>
+            </a>
+          </div>
+        </iframe>
+      </div>
+
+      <!-- Action Téléchargement Mobile -->
+      <div class="flex sm:hidden items-center gap-2 pt-1">
+        <a href="CV_Melon_Joanes_AFAGNIBO_FR.pdf" download="CV_Melon_Joanes_AFAGNIBO_FR.pdf"
+          class="flex-1 py-2.5 rounded-xl bg-[var(--bg-surface-hover)] border border-[var(--border)] text-[var(--text-primary)] text-xs font-semibold flex items-center justify-center gap-1.5">
+          <span class="material-symbols-outlined text-base">download</span>
+          <span>FR</span>
+        </a>
+        <a href="CV_Melon_Joanes_AFAGNIBO_EN.pdf" download="CV_Melon_Joanes_AFAGNIBO_EN.pdf"
+          class="flex-1 py-2.5 rounded-xl bg-[var(--accent)] text-white text-xs font-semibold flex items-center justify-center gap-1.5">
+          <span class="material-symbols-outlined text-base">download</span>
+          <span>EN</span>
+        </a>
+      </div>
+
+    </div>
+  </dialog>
+</body>
+
+</html>
