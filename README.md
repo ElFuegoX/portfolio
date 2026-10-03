@@ -2,7 +2,7 @@
 
 > Développeur Full-Stack · Étudiant en Intelligence Artificielle à l'IFRI (UAC, Bénin)
 
-🔗 **Live :** [elfuegox.github.io](https://elfuegox.github.io)
+🔗 **Live :** [elfuegox.github.io/portfolio](https://elfuegox.github.io/portfolio)
 
 ---
 
@@ -41,10 +41,8 @@ portfolio/
 
 ## 🚀 Déploiement sur GitHub Pages
 
-1. Créer un repo GitHub nommé `ElFuegoX.github.io`
-2. Push tous les fichiers à la racine
-3. **Settings → Pages → Source : `main` branch, root `/`**
-4. Live sur `https://elfuegox.github.io` en 2 minutes ✅
+1. Settings → Pages → Source : `main` branch, root `/`
+2. Live sur `https://elfuegox.github.io/portfolio` en 2 minutes ✅
 
 ---
 
