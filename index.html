@@ -17,6 +17,11 @@
       background-color: #D4C9B8 !important;
       color: #0F172A !important;
     }
+
+    html.light #logo-mobile,
+    html.light #logo-desktop {
+      content: url('logo_mj_light.png');
+    }
   </style>
   <script>
     (function () {
@@ -39,6 +44,9 @@
 
   <!-- Favicon (Logo MJ comme icône du site) -->
   <link rel="icon" type="image/jpeg" href="logo_mj.jpg" />
+  <link rel="preload" as="image" href="logo_mj.jpg" />
+  <link rel="preload" as="image" href="logo_mj_light.png" />
+  <link rel="preload" as="image" href="moiIndaba.jpeg" fetchpriority="high" />
 
   <!-- SEO -->
   <meta name="description"
@@ -65,16 +73,16 @@
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=optional"
     rel="stylesheet" />
   <!-- Clash Display (Fontshare Premium CDN - très utilisé sur Awwwards & Fintech IA) -->
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=optional" rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..24,400,0..1,0&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..24,400,0..1,0&display=optional"
     rel="stylesheet" />
 
   <!-- Lenis Smooth Scroll -->
-  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script defer src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 
   <style>
     :root {
@@ -92,11 +100,8 @@
       --glow: rgba(255, 107, 53, 0.25);
     }
 
-    :root:not(.dark),
-    html:not(.dark),
     html.light,
-    body:not(.dark),
-    body.light {
+    html.light body {
       --bg-body: #D4C9B8 !important;
       --bg-surface: #DDD4C5 !important;
       --bg-surface-hover: #C8BAA6 !important;
@@ -115,8 +120,11 @@
       background-color: var(--bg-body);
       color: var(--text-primary);
       font-family: 'Plus Jakarta Sans', sans-serif;
-      transition: background-color 0.3s ease, color 0.3s ease;
       overflow-x: hidden;
+    }
+
+    body.theme-ready {
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     /* Option 2: Clash Display pour des titres puissants & identitaires */
@@ -535,28 +543,7 @@
     }
   </style>
 
-  <script>
-    window.tailwind = window.tailwind || {};
-    window.tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            body: "var(--bg-body)",
-            surface: "var(--bg-surface)",
-            "surface-hover": "var(--bg-surface-hover)",
-            borderColor: "var(--border)",
-            primaryText: "var(--text-primary)",
-            secondaryText: "var(--text-secondary)",
-            tertiaryText: "var(--text-tertiary)",
-            brandAccent: "var(--accent)",
-            brandFlame: "var(--flame)"
-          }
-        }
-      }
-    };
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/tailwind.css" />
 </head>
 
 <body class="relative">
@@ -765,7 +752,7 @@
       <main class="flex-1 max-w-[900px] w-full mx-auto px-6 sm:px-12 py-16 lg:py-20 flex flex-col gap-20">
 
         <!-- SECTION 1: HERO & PRÉSENTATION -->
-        <section class="flex flex-col gap-6 pt-10 lg:pt-0 reveal" id="hero">
+        <section class="flex flex-col gap-6 pt-10 lg:pt-0 reveal active" id="hero">
           <!-- Availability Badge -->
           <div
             class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 w-fit">
@@ -1536,6 +1523,7 @@
       if (themeIconMobile) themeIconMobile.textContent = iconName;
 
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      document.body.classList.add('theme-ready');
     }
 
     function toggleTheme() {

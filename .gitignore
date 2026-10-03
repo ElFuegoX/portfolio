@@ -10,10 +10,13 @@ maquette_sidebar.jpg
 logo_mj_blue_dark.png
 
 # CSS/JS de l'ancienne v1 (non utilisés en v2)
-css/
+css/*
+!css/tailwind-input.css
+!css/tailwind.css
 js/
 
 # OS / éditeurs
+node_modules/
 .DS_Store
 Thumbs.db
 desktop.ini
