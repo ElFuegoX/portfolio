@@ -6,17 +6,20 @@
   <meta name="color-scheme" content="dark light" />
   <!-- Anti-FOUC & Fond critique : appliqué AVANT tout appel réseau / polices distantes -->
   <style>
-    html, body {
+    html,
+    body {
       background-color: #0B0F14;
       color: #E6EDF3;
     }
-    html.light, html.light body {
+
+    html.light,
+    html.light body {
       background-color: #D4C9B8 !important;
       color: #0F172A !important;
     }
   </style>
   <script>
-    (function() {
+    (function () {
       var t = localStorage.getItem('theme');
       var isLight = (t === 'light');
       var html = document.documentElement;
@@ -38,7 +41,8 @@
   <link rel="icon" type="image/jpeg" href="logo_mj.jpg" />
 
   <!-- SEO -->
-  <meta name="description" content="Portfolio de Mélon Joanès AFAGNIBO — Étudiant IA à l'IFRI, développeur Full-Stack. Projets XoNet, VoiceNote, Thomas, DM Arena." />
+  <meta name="description"
+    content="Portfolio de Mélon Joanès AFAGNIBO — Étudiant IA à l'IFRI, développeur Full-Stack. Projets XoNet, VoiceNote, Thomas, DM Arena." />
   <meta name="author" content="Mélon Joanès AFAGNIBO" />
   <link rel="canonical" href="https://elfuegox.github.io/" />
 
@@ -46,7 +50,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://elfuegox.github.io/" />
   <meta property="og:title" content="Mélon Joanès AFAGNIBO — Fullstack Dev & AI Enthusiast" />
-  <meta property="og:description" content="Étudiant en IA à l'IFRI · Développeur Full-Stack · Projets XoNet, VoiceNote, Thomas, DM Arena." />
+  <meta property="og:description"
+    content="Étudiant en IA à l'IFRI · Développeur Full-Stack · Projets XoNet, VoiceNote, Thomas, DM Arena." />
   <meta property="og:image" content="https://elfuegox.github.io/moiIndaba.jpeg" />
   <meta property="og:locale" content="fr_FR" />
 
@@ -115,13 +120,17 @@
     }
 
     /* Option 2: Clash Display pour des titres puissants & identitaires */
-    h1, h2, h3, .font-display {
+    h1,
+    h2,
+    h3,
+    .font-display {
       font-family: 'Clash Display', 'Plus Jakarta Sans', sans-serif;
       letter-spacing: -0.02em;
     }
 
     /* Accents éditoriaux / prestige */
-    .font-serif-title, .font-editorial {
+    .font-serif-title,
+    .font-editorial {
       font-family: 'Fraunces', Georgia, serif;
     }
 
@@ -161,6 +170,7 @@
       background-color: var(--accent) !important;
       color: #FFFFFF !important;
     }
+
     ::-moz-selection {
       background-color: var(--accent) !important;
       color: #FFFFFF !important;
@@ -170,6 +180,7 @@
       background-color: rgba(255, 107, 53, 0.35) !important;
       color: #FF8552 !important;
     }
+
     .dark ::-moz-selection {
       background-color: rgba(255, 107, 53, 0.35) !important;
       color: #FF8552 !important;
@@ -180,6 +191,7 @@
       background-color: rgba(2, 132, 199, 0.25) !important;
       color: #0284C7 !important;
     }
+
     html:not(.dark) ::-moz-selection,
     html.light ::-moz-selection {
       background-color: rgba(2, 132, 199, 0.25) !important;
@@ -250,6 +262,7 @@
     #ambient-spotlight {
       background: radial-gradient(700px circle at var(--cursor-x, 50vw) var(--cursor-y, 40vh), var(--glow), transparent 70%);
     }
+
     html:not(.dark) #ambient-spotlight,
     html.light #ambient-spotlight {
       background: radial-gradient(750px circle at var(--cursor-x, 50vw) var(--cursor-y, 40vh), rgba(14, 165, 233, 0.18), transparent 68%) !important;
@@ -416,10 +429,10 @@
       border: 2px solid var(--border) !important;
       box-shadow: none !important;
       transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1),
-                  opacity 0.8s ease-out,
-                  border-color 0.8s ease,
-                  background-color 0.8s ease,
-                  box-shadow 1s cubic-bezier(0.19, 1, 0.22, 1);
+        opacity 0.8s ease-out,
+        border-color 0.8s ease,
+        background-color 0.8s ease,
+        box-shadow 1s cubic-bezier(0.19, 1, 0.22, 1);
       will-change: transform, opacity, box-shadow;
     }
 
@@ -446,8 +459,8 @@
       transform: translate3d(-30px, 16px, 0) scale(0.975);
       filter: blur(5px);
       transition: opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1),
-                  transform 1.35s cubic-bezier(0.19, 1, 0.22, 1),
-                  filter 1s ease-out;
+        transform 1.35s cubic-bezier(0.19, 1, 0.22, 1),
+        filter 1s ease-out;
       will-change: opacity, transform, filter;
     }
 
@@ -456,12 +469,13 @@
       transform: translate3d(30px, 16px, 0) scale(0.975);
       filter: blur(5px);
       transition: opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1),
-                  transform 1.35s cubic-bezier(0.19, 1, 0.22, 1),
-                  filter 1s ease-out;
+        transform 1.35s cubic-bezier(0.19, 1, 0.22, 1),
+        filter 1s ease-out;
       will-change: opacity, transform, filter;
     }
 
     @media (max-width: 767px) {
+
       .timeline-item:nth-child(odd) .timeline-card,
       .timeline-item:nth-child(even) .timeline-card {
         transform: translate3d(0, 24px, 0) scale(0.98);
@@ -479,6 +493,7 @@
       transition: opacity 0.8s ease-out, transform 0.8s ease-out, filter 0.8s ease-out;
       transition-delay: 0s !important;
     }
+
     .timeline-item:not(.active) .timeline-dot {
       transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.8s ease-out;
       transition-delay: 0s !important;
@@ -520,9 +535,9 @@
     }
   </style>
 
-  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = {
       darkMode: "class",
       theme: {
         extend: {
@@ -541,6 +556,7 @@
       }
     };
   </script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="relative">
@@ -589,25 +605,25 @@
           href="#parcours">Parcours</a>
       </nav>
     </div>
-      <div class="grid grid-cols-2 gap-2">
-        <button type="button"
-          onclick="document.getElementById('cv-modal').showModal(); document.getElementById('mobile-drawer')?.classList.add('hidden');"
-          class="py-3 px-2 rounded-xl bg-[var(--bg-surface)] text-center font-medium border border-[var(--border)] text-[var(--text-primary)] hover:border-[var(--accent)] transition-colors flex items-center justify-center gap-1.5 text-xs sm:text-sm cursor-pointer">
-          <span class="material-symbols-outlined text-base text-[var(--accent)]">visibility</span>
-          <span>Aperçu CV</span>
-        </button>
-        <a href="CV_Melon_Joanes_AFAGNIBO_EN.pdf" download="CV_Melon_Joanes_AFAGNIBO_EN.pdf"
-          class="py-3 px-2 rounded-xl bg-[var(--accent)] text-center font-medium text-white hover:opacity-90 transition-opacity flex items-center justify-center gap-1.5 text-xs sm:text-sm shadow-sm">
-          <span class="material-symbols-outlined text-base">download</span>
-          <span>Télécharger</span>
-        </a>
-      </div>
-      <div class="flex justify-center gap-6 text-[var(--text-secondary)]">
-        <a href="https://github.com/ElFuegoX" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com/in/melon-joanes-afagnibo" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="mailto:afagnibomelonjoanes@gmail.com">Email</a>
-      </div>
+    <div class="grid grid-cols-2 gap-2">
+      <button type="button"
+        onclick="document.getElementById('cv-modal').showModal(); document.getElementById('mobile-drawer')?.classList.add('hidden');"
+        class="py-3 px-2 rounded-xl bg-[var(--bg-surface)] text-center font-medium border border-[var(--border)] text-[var(--text-primary)] hover:border-[var(--accent)] transition-colors flex items-center justify-center gap-1.5 text-xs sm:text-sm cursor-pointer">
+        <span class="material-symbols-outlined text-base text-[var(--accent)]">visibility</span>
+        <span>Aperçu CV</span>
+      </button>
+      <a href="CV_Melon_Joanes_AFAGNIBO_EN.pdf" download="CV_Melon_Joanes_AFAGNIBO_EN.pdf"
+        class="py-3 px-2 rounded-xl bg-[var(--accent)] text-center font-medium text-white hover:opacity-90 transition-opacity flex items-center justify-center gap-1.5 text-xs sm:text-sm shadow-sm">
+        <span class="material-symbols-outlined text-base">download</span>
+        <span>Télécharger</span>
+      </a>
     </div>
+    <div class="flex justify-center gap-6 text-[var(--text-secondary)]">
+      <a href="https://github.com/ElFuegoX" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://linkedin.com/in/melon-joanes-afagnibo" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:afagnibomelonjoanes@gmail.com">Email</a>
+    </div>
+  </div>
   </div>
 
   <div class="min-h-screen flex flex-col lg:flex-row">
@@ -765,7 +781,8 @@
                 class="name-reveal-primary font-serif-title text-4xl sm:text-5xl font-medium tracking-tight text-[var(--accent)]">
                 Mélon Joanès AFAGNIBO
               </h1>
-              <span class="name-reveal-alias font-serif-title text-4xl sm:text-5xl font-medium tracking-tight text-[var(--accent)]">
+              <span
+                class="name-reveal-alias font-serif-title text-4xl sm:text-5xl font-medium tracking-tight text-[var(--accent)]">
                 ElFuegoX
               </span>
             </div>
@@ -777,8 +794,10 @@
           <!-- Paragraphe (gauche) + Photo agrandie (droite) -->
           <div class="flex flex-col sm:flex-row items-start gap-8">
             <p class="flex-1 text-base sm:text-[17px] text-[var(--text-secondary)] leading-relaxed font-normal">
-              Je suis en 3ᵉ année de licence en Intelligence Artificielle à l'IFRI (Université d'Abomey-Calavi, Bénin). Ce
-              qui compte pour moi n'est pas d'empiler les technologies pour la forme, mais de choisir la bonne pour le bon
+              Je suis en 3ᵉ année de licence en Intelligence Artificielle à l'IFRI (Université d'Abomey-Calavi, Bénin).
+              Ce
+              qui compte pour moi n'est pas d'empiler les technologies pour la forme, mais de choisir la bonne pour le
+              bon
               problème : un pipeline ML classique pour classer une langue peu dotée, un système RAG là où la recherche
               documentaire prime, une automatisation n8n là où un modèle serait too much. Et quand le besoin est avant
               tout produit, je construis l'application complète, de l'architecture backend jusqu'à l'interface. Mon
@@ -788,9 +807,10 @@
             <!-- Photo Personnelle (cliquable avec modale) -->
             <button id="open-photo-modal" type="button" aria-label="Agrandir la photo"
               class="relative group shrink-0 cursor-pointer text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] rounded-2xl">
-              <div onclick="document.getElementById('photo-modal').showModal()" 
+              <div onclick="document.getElementById('photo-modal').showModal()"
                 class="w-50 h-60 sm:w-64 sm:h-64 rounded-2xl overflow-hidden border-2 border-[var(--border)] group-hover:border-[var(--accent)] transition-all duration-300 flame-glow bg-[var(--bg-surface)] flex items-center justify-center relative cursor-pointer">
-                <img src="moiIndaba.jpeg" alt="Mélon Joanès AFAGNIBO" class="w-full h-full object-cover object-[50%_15%] group-hover:scale-105 transition-transform duration-500 ease-out"
+                <img src="moiIndaba.jpeg" alt="Mélon Joanès AFAGNIBO"
+                  class="w-full h-full object-cover object-[50%_15%] group-hover:scale-105 transition-transform duration-500 ease-out"
                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                 <div
                   class="hidden flex-col items-center justify-center text-[var(--text-tertiary)] group-hover:text-[var(--accent)] transition-colors p-2 text-center">
@@ -1286,9 +1306,12 @@
         </section>
 
         <!-- FOOTER & CONNECT HUB (Rounded 3XL, Grand Margin-Top, Lueur feutrée) -->
-        <footer class="mt-24 pt-14 pb-16 px-6 sm:px-10 rounded-3xl border border-dashed border-[var(--accent)]/40 bg-[var(--bg-surface)]/40 backdrop-blur-sm flex flex-col items-center gap-8 text-center reveal relative shadow-lg">
+        <footer
+          class="mt-24 pt-14 pb-16 px-6 sm:px-10 rounded-3xl border border-dashed border-[var(--accent)]/40 bg-[var(--bg-surface)]/40 backdrop-blur-sm flex flex-col items-center gap-8 text-center reveal relative shadow-lg">
           <!-- Ligne de lueur d'ambiance discrète sur le top border -->
-          <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[var(--accent)]/50 to-transparent blur-[1px] pointer-events-none"></div>
+          <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[var(--accent)]/50 to-transparent blur-[1px] pointer-events-none">
+          </div>
           <!-- Connect Hub Header -->
           <div class="flex flex-col items-center gap-1.5 max-w-md">
             <span class="font-mono-code text-xs text-[var(--accent)] uppercase tracking-wider font-semibold">Connect &
@@ -1631,11 +1654,12 @@
     onclick="if (event.target === this) this.close()">
     <div
       class="relative w-full bg-[var(--bg-surface)] border border-[var(--border)] rounded-3xl p-4 sm:p-6 shadow-2xl flex flex-col gap-4 animate-in fade-in zoom-in-95 duration-200">
-      
+
       <!-- En-tête de la visionneuse -->
       <div class="flex items-center justify-between border-b border-[var(--border)] pb-3">
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center text-[var(--accent)]">
+          <div
+            class="w-10 h-10 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center text-[var(--accent)]">
             <span class="material-symbols-outlined text-2xl">picture_as_pdf</span>
           </div>
           <div>
@@ -1662,7 +1686,8 @@
       </div>
 
       <!-- Cadre d'affichage du PDF -->
-      <div class="w-full h-[68vh] sm:h-[74vh] bg-[var(--bg-body)] rounded-2xl overflow-hidden border border-[var(--border)] relative">
+      <div
+        class="w-full h-[68vh] sm:h-[74vh] bg-[var(--bg-body)] rounded-2xl overflow-hidden border border-[var(--border)] relative">
         <iframe src="CV_Melon_Joanes_AFAGNIBO_EN.pdf#view=FitH" class="w-full h-full rounded-2xl" frameborder="0">
           <div class="w-full h-full flex flex-col items-center justify-center p-6 text-center gap-3">
             <p class="text-sm text-[var(--text-primary)]">Aperçu direct non disponible sur ce navigateur.</p>
