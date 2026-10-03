@@ -3,6 +3,34 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="color-scheme" content="dark light" />
+  <!-- Anti-FOUC & Fond critique : appliqué AVANT tout appel réseau / polices distantes -->
+  <style>
+    html, body {
+      background-color: #0B0F14;
+      color: #E6EDF3;
+    }
+    html.light, html.light body {
+      background-color: #D4C9B8 !important;
+      color: #0F172A !important;
+    }
+  </style>
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      var isLight = (t === 'light');
+      var html = document.documentElement;
+      if (isLight) {
+        html.classList.remove('dark');
+        html.classList.add('light');
+        html.style.backgroundColor = '#D4C9B8';
+      } else {
+        html.classList.remove('light');
+        html.classList.add('dark');
+        html.style.backgroundColor = '#0B0F14';
+      }
+    })();
+  </script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Mélon Joanès AFAGNIBO — Fullstack Web Developer · AI & Data Enthusiast</title>
 
