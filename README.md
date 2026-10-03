@@ -11,7 +11,7 @@
 | Couche | Technologie |
 |---|---|
 | Structure | HTML5 sémantique |
-| Style | Tailwind CSS (CDN) + CSS custom |
+| Style | Tailwind CSS compilé + CSS custom |
 | Typographies | Clash Display · Fraunces · Plus Jakarta Sans · JetBrains Mono |
 | Animations | Lenis smooth scroll · IntersectionObserver · CSS transitions |
 | Interactivité | Vanilla JS — dark/light mode, timeline laser, modales, scroll spy |
@@ -24,6 +24,11 @@
 ```
 portfolio/
 ├── index.html                        # Site complet (tout inline)
+├── package.json                       # Script de compilation Tailwind
+├── tailwind.config.js                 # Configuration Tailwind
+├── css/
+│   ├── tailwind-input.css             # Entrée Tailwind
+│   └── tailwind.css                   # CSS compilé pour la production
 ├── logo_mj.jpg                       # Logo dark mode
 ├── logo_mj_light.png                 # Logo light mode
 ├── moiIndaba.jpeg                    # Photo de profil
@@ -41,8 +46,10 @@ portfolio/
 
 ## 🚀 Déploiement sur GitHub Pages
 
-1. Settings → Pages → Source : `main` branch, root `/`
-2. Live sur `https://elfuegox.github.io/portfolio` en 2 minutes ✅
+1. Installer les dépendances : `npm install`
+2. Compiler le CSS : `npm run build:css`
+3. Settings → Pages → Source : `main` branch, root `/`
+4. Live sur `https://elfuegox.github.io/portfolio` en 2 minutes ✅
 
 ---
 
